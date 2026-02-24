@@ -73,6 +73,7 @@ services:
     volumes:
     - source: rabbitmq
       target: /var/lib/rabbitmq
+      type: volume
     environment:
     - RABBITMQ_DEFAULT_USER=roboshop
     - RABBITMQ_DEFAULT_PASS=roboshop123
