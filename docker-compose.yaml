@@ -21,6 +21,7 @@ services:
     - user 
     - cart 
     - shipping
+    - payment 
   user:
     build: ./user
     image: chandu2828/user:v1
