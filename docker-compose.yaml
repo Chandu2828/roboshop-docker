@@ -20,6 +20,7 @@ services:
     - catalogue 
     - user 
     - cart 
+    - shipping
   user:
     build: ./user
     image: chandu2828/user:v1
