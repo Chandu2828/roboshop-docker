@@ -45,6 +45,12 @@ services:
     depends_on:
     - redis 
     - catalogue 
+  mysql:
+    image: chandu2828/mysql:v1
+    build: ./mysql 
+    container_name: mysql 
+    environment: 
+      MYSQL_ROOT_PASSWORD: "RoboShop@1"
 networks: # networks will be created first when you run docker compose up
   default: # this means all the service in this file use this network 
     name: roboshop
