@@ -32,7 +32,18 @@ services:
     - mongodb 
   redis: # as we are not customizing redis and we are using official image we don't need to push to our docker hub
     image: redis:7
-    container_name: redis # docker run -d --name redis --network roboshop redis:7 
+    container_name: redis # docker run -d --name redis --network roboshop redis:7
+  cart:
+    build: ./cart
+    image: chandu2828/cart:v1 
+    container_name: cart 
+    environment:
+      REDIS_HOST: redis 
+      CATALOGIE_HOST: catalogue 
+      CATALOGUE_PORT: 8080 
+    depends_on:
+    - redis 
+    - catalogue 
 networks: # networks will be created first when you run docker compose up
   default: # this means all the service in this file use this network 
     name: roboshop
