@@ -21,7 +21,7 @@ RUN touch /var/run/nginx.pid && \
 COPY static/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
 USER nginx 
-CMD ["nginx", "-g", "daemon 0ff;"]
+CMD ["nginx", "-g", "daemon off;"]
 
 
 # FROM nginx:1.24.0 
