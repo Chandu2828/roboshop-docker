@@ -1,4 +1,4 @@
-name: roboshop
+name: roboshop # Refers to project name of your docker compose environment
 services: 
   mongodb:
     build: ./mongodb
@@ -56,6 +56,7 @@ services:
     build: ./mysql 
     container_name: mysql 
     command: --mysql-native-password=ON --innodb-lock_wait_timeout=120 
+    #  changes the time a MySQL transaction waits for a row lock from the default 50 seconds to 120 seconds (2 minutes) before throwing a lock wait timeout error.
     environment: 
       MYSQL_ROOT_PASSWORD: "RoboShop@1"
     volumes:
