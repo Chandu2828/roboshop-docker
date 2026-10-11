@@ -1,7 +1,8 @@
 # compose tags every container, network and volume it creates with the label com.docker.compose.project=roboshop 
 # That’s how commands like docker compose down or docker compose ps know which resources belong to this stack.
 # If you don't set container name, by default the name will be roboshop-mongodb etc.. 
-# Two projects with different names can have services with the same name (e.g., both having a redis service) without clashing, because their resources are prefixed differently.
+# Two projects with different names can have services with the same name (e.g., both having a redis service) without clashing, 
+# because their resources are prefixed differently.
 
 name: roboshop # Refers to project name of your docker compose environment
 services: 
